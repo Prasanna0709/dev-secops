@@ -80,4 +80,23 @@ pipeline{
             }
         }
     }
+
+    post{
+        success{
+             emailext (
+                            subject : "Build Success So Please kindly check it !",
+                            body:"""<html>
+                                            <body>
+                                                <h1>Build Status : Success for ${JOB_NAME} for build ${currentBuild.number}</h1>
+                                                <h3>Please Verify all the APIs from the QA 😊</h3>
+                                                <h4>Info from Operation Team ❤️</h4>
+                                           </body>
+                                         </html> """,
+                           to:"prasannap0218@gmail.com",
+                           from:"devjenkins0218@gmail.com",
+                           replyTo: "devjenkins0218@gmail.com",
+                           mimeType:"text/html"
+            )
+        }
+    }
 }
