@@ -2,8 +2,8 @@ pipeline{
     agent any
 
     environment{
-        DOCKER_IMAGE_NAME = "mySwaggerApp"
-        DOCKER_CONTAINER_NAME = "SwaggerAppContainer"
+        DOCKER_IMAGE_NAME = "myswaggerapp"
+        DOCKER_CONTAINER_NAME = "swaggerappcontainer"
     }
 
     stages{
