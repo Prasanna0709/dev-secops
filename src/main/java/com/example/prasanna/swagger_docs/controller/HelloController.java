@@ -11,4 +11,7 @@ public class HelloController {
         return "Hello I am spring boot from Docker !";
     }
 
+    @GetMapping
+    public void hello(){};
+
 }
