@@ -84,6 +84,7 @@ pipeline{
     post{
         success{
              emailext (
+                            to: 'prasannap0218@gmail.com',
                             subject : "Build Success So Please kindly check it !",
                             body:"""<html>
                                             <body>
